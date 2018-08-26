@@ -7,6 +7,10 @@
     <title>Tasklist</title>
     <%= csrf_meta_tags %>
 
+    <style>
+    
+
+    </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -14,9 +18,12 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %> 
-    <%= render 'layouts/flash_messages' %>
-    
-    <%= yield %>
+
+      <%= render 'layouts/navbar' %> 
+      <div class="container">
+      <%= render 'layouts/flash_messages' %>
+      
+      <%= yield %>
+      </div>
   </body>
 </html>
