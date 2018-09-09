@@ -30,6 +30,10 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
+    if current_user != @task.user
+      flash[:danger] = '不正なアクセスがありました'
+      redirect_to root_url
+    end
   end
 
   def update
